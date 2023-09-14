@@ -6,22 +6,22 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                sh 'cd client/admin && npm install'
+                sh 'cd auxiliatron/client/admin && npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'cd client/admin'
+                sh 'cd auxiliatron/client/admin'
             }
         }
         stage('Test') {
             steps {
-                sh 'cd client/admin && npm run test' 
+                sh 'cd auxiliatron/client/admin && npm run test' 
             }
         }
         stage('Test e2e') {
             steps {
-               sh 'cd client/admin && npm run e2e'
+               sh 'cd auxiliatron/client/admin && npm run e2e'
             }
         }
         stage('Deploy') {
