@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                sh 'cd client/admin && npm install'
+                sh 'cd auxiliatron/client/admin && npm install'
             }
         }
         stage('Build') {
